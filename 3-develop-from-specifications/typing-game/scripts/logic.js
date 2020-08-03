@@ -1,4 +1,4 @@
-const _Tests = [
+const newTests = [
   { name: 'Test 1', args: [1, 1], expected: 'passing' },
   { name: 'Test 2', args: ['1', 1], expected: 'failing' },
   { name: 'Test 3', args: [1e2, 100], expected: 'passing' },
@@ -14,4 +14,4 @@ function _() {
 
 }
 
-testing(_, _Tests);
+testing(_, newTests);

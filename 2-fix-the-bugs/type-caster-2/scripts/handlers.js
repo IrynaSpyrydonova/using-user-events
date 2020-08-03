@@ -5,14 +5,14 @@ function typeCastHandler(event) {
   const newValue = form.value.value;
 
   // execute core logic
-  const newValue = typeCasting(stringToCast, intendedType);
-
+  const result = typeCaster(newValue, intendedType);
+  
   // communicate result to user
-  document.GetElementById('casted-value').InnerHTML = typeof newValue + ': ' + newValue;
+  document.getElementById('casted-value').innerHTML = typeof result + ': ' + result;
 
   // log action for developers
   console.log('\n-- user action --');
-  console.log('stringToCast:', '(' + typeof stringToCast + ')', stringToCast);
+  console.log('stringToCast:', '(' + typeof newValue + ')', newValue);
   console.log('intendedType:', '(' + typeof intendedType + ')', intendedType);
   console.log('newValue:', '(' + typeof newValue + ')', newValue);
 }

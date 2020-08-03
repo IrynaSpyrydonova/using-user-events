@@ -1,9 +1,12 @@
-function __(event) {
+function setBackground(event) {
+
+  event.preventDefault();
   // read & process user input
-  const divId = event.target.__;
+
+  const divId = event.target.id;
 
   // execute core logic
-  const newColor = __(divId);
+  const newColor = filterColors(divId);
 
   // display results to user
   document.body.style.backgroundColor = newColor;
@@ -14,9 +17,9 @@ function __(event) {
   console.log('newColor:', '(' + typeof newColor + ')', newColor);
 }
 
-function __() {
+function unsetBackground() {
   // render results to user
-  document.body.style.__ = 'white';
+  document.body.style.backgroundColor = 'white';
 
   // log action for developers
   console.log('\n-- unsetBackground --');

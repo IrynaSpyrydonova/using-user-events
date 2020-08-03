@@ -1,15 +1,17 @@
 function displaySubString(event) {
   // read & process user input
-  const userString = event.target.string.value;
 
-  const preStart = event.target.start.value;
+  const form = event.target.form
+  const userString = form.string.value;
+
+  const preStart = form.begin.value;
   const start = Number(preStart);
 
-  const preEnd = event.target.end.value;
+  const preEnd = form.end.value;
   const end = Number(preEnd);
 
   // execute core logic
-  const result = getPartOfString(userString, start, end);
+  const result = getPartialString(userString, start, end);
 
   // communicate result to user
   document.getElementById('program-output').innerHTML = result;

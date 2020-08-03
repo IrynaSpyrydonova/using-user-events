@@ -1,1 +1,6 @@
 /* style me! */
+#program-output {
+    position: fixed;
+    left: 5vh;
+    top: 5vh;
+  }
